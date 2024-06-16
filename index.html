@@ -2,13 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Image Analysis with Azure Computer Vision</title>
+    <title>Image Analysis Tool (pingagi)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 300px;
+            display: block;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Image Analysis Tool</h1>
-    <input type="text" id="imageUrl" placeholder="Enter image URL">
-    <button onclick="analyzeImage()">Analyze Image</button>
-    <div id="imageDescription"></div>
+    <div class="container">
+        <h1>Image Analysis Tool</h1>
+        <input type="text" id="imageUrl" placeholder="Enter image URL">
+        <button onclick="sendImageToAzure()">Analyze Image</button>
+        <p id="description"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
